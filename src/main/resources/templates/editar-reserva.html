@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Editar Reserva</title>
+</head>
+<body>
+    <h1>Editar Reserva</h1>
+    <form th:action="@{/reservas/actualizar/{id}(id=${reserva.id})}" method="post">
+        <label>Fecha:</label>
+        <input type="date" name="fecha" th:value="${reserva.fecha}"><br>
+        <label>Hora:</label>
+        <input type="time" name="hora" th:value="${reserva.hora}"><br>
+        <label>Número de Personas:</label>
+        <input type="number" name="numeroPersonas" th:value="${reserva.numeroPersonas}"><br>
+        <label>Restaurante ID:</label>
+        <input type="number" name="restauranteId" th:value="${reserva.restauranteId}"><br>
+        <button type="submit">Actualizar</button>
+    </form>
+    <a href="/reservas">Volver</a>
+</body>
+</html>

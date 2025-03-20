@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Agregar Reserva</title>
+</head>
+<body>
+    <h1>Agregar Nueva Reserva</h1>
+    <form action="/reservas/guardar" method="post">
+        <label>Fecha:</label>
+        <input type="date" name="fecha"><br>
+        <label>Hora:</label>
+        <input type="time" name="hora"><br>
+        <label>Número de Personas:</label>
+        <input type="number" name="numeroPersonas"><br>
+        <label>Restaurante ID:</label>
+        <input type="number" name="restauranteId"><br>
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="/reservas">Volver</a>
+</body>
+</html>
